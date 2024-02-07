@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		inline: {
 			dist: {
 				src: ['test/dist/*.html'],
-				dest: ['tmp/']
+				dest: 'tmp/'
 			}
 		},
 
@@ -20,14 +20,16 @@ module.exports = function(grunt) {
 					collapseWhitespace: true
 				},
 				files: {
-					'tmp/css.min.html': 'tmp/css.html',
-					'tmp/img.min.html': 'tmp/img.html',
-					'tmp/html.min.html': 'tmp/html.html',
-					'tmp/script.min.html': 'tmp/script.html',
-					'tmp/css_greedy.min.html': 'tmp/css_greedy.html',
-					'tmp/img_greedy.min.html': 'tmp/img_greedy.html',
-					'tmp/html_greedy.min.html': 'tmp/html_greedy.html',
-					'tmp/script_greedy.min.html': 'tmp/script_greedy.html'
+					'tmp/css.min.html': 'tmp/test/dist/css.html',
+					'tmp/img.min.html': 'tmp/test/dist/img.html',
+					'tmp/html.min.html': 'tmp/test/dist/html.html',
+					'tmp/script.min.html': 'tmp/test/dist/script.html',
+					'tmp/inlined.min.html': 'tmp/test/dist/inlined.html',
+					'tmp/css_greedy.min.html': 'tmp/test/dist/css_greedy.html',
+					'tmp/img_greedy.min.html': 'tmp/test/dist/img_greedy.html',
+					'tmp/html_greedy.min.html': 'tmp/test/dist/html_greedy.html',
+					'tmp/script_greedy.min.html': 'tmp/test/dist/script_greedy.html',
+					'tmp/inlined_greedy.min.html': 'tmp/test/dist/inlined_greedy.html',
 				}
 			}
 		},
