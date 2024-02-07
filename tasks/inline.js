@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 			}
 
 			return ret;
-		}).replace(/<script.+?src=["']([^"']+?)["'].*?>\s*<\/script>/g, function(matchedWord, src){
+		}).replaceAll(/<script src=["']([^"']+?)["'].*?>[\s\S]*?<\/script>/gi, function(matchedWord, src){
 			var ret = matchedWord;
 
 			if(!isRemotePath(src) && src.indexOf(options.tag)!=-1){
