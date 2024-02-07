@@ -47,7 +47,7 @@ exports.inline = function(test) {
     assertFileEquality(test,
       'tmp/inlined_greedy.min.html',
       'test/expected/inlined_greedy.min.html',
-      'Should compile multiple script targets');
+      'Should compile multiple script targets without newline characters');
 
     test.done();
 };
