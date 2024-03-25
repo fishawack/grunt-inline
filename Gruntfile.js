@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 					'tmp/html.min.html': 'tmp/test/dist/html.html',
 					'tmp/script.min.html': 'tmp/test/dist/script.html',
 					'tmp/inlined.min.html': 'tmp/test/dist/inlined.html',
+					'tmp/inlined_type.min.html': 'tmp/test/dist/inlined_type.html',
 					'tmp/css_greedy.min.html': 'tmp/test/dist/css_greedy.html',
 					'tmp/img_greedy.min.html': 'tmp/test/dist/img_greedy.html',
 					'tmp/html_greedy.min.html': 'tmp/test/dist/html_greedy.html',

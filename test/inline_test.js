@@ -22,7 +22,7 @@ function assertFileEquality(test, pathToActual, pathToExpected, message) {
 exports.inline = function(test) {
     'use strict';
 
-    test.expect(5);
+    test.expect(6);
 
     assertFileEquality(test,
       'tmp/css.min.html',
@@ -48,6 +48,11 @@ exports.inline = function(test) {
       'tmp/inlined.min.html',
       'test/expected/inlined.min.html',
       'Should compile multiple inlined scripts');
+
+    assertFileEquality(test,
+      'tmp/inlined_type.min.html',
+      'test/expected/inlined_type.min.html',
+      'Should compile multiple inlined scripts with type on import');
 
     test.done();
 };
