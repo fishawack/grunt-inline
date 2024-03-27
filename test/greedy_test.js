@@ -22,7 +22,7 @@ function assertFileEquality(test, pathToActual, pathToExpected, message) {
 exports.inline = function(test) {
     'use strict';
 
-    test.expect(5);
+    test.expect(6);
 
     assertFileEquality(test,
       'tmp/img_greedy.min.html',
@@ -48,6 +48,11 @@ exports.inline = function(test) {
       'tmp/inlined_greedy.min.html',
       'test/expected/inlined_greedy.min.html',
       'Should compile multiple script targets without newline characters');
+
+    assertFileEquality(test,
+      'tmp/inlined_type.min.html',
+      'test/expected/inlined_type.min.html',
+      'Should compile multiple script targets including types on import');
 
     test.done();
 };

@@ -125,8 +125,10 @@ module.exports = function(grunt) {
 			}
 
 			return ret;
-		}).replaceAll(/<script src=["']([^"']+?)["'].*?>[\s\S]*?<\/script>/gi, function(matchedWord, src){
+		}).replaceAll(/<script[^>]+?src=["']([^"']+?)["'].*?>[\s\S]*?<\/script>/g, function(matchedWord, src){
 			var ret = matchedWord;
+			grunt.log.writeln('');
+			grunt.log.writeln('look here' +  ret );
 
 			if(!isRemotePath(src) && src.indexOf(options.tag)!=-1){
 				var inlineFilePath = path.resolve( path.dirname(filepath), src ).replace(/\?.*$/, '');	// 将参数去掉
